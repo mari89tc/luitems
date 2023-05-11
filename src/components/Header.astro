@@ -1,0 +1,159 @@
+<button id="burger-menu">
+  Menu
+  <span></span>
+</button>
+
+<nav id="menu">
+  <ul>
+    <li><a href="/home">HOME</a></li>
+    <li><a href="/products">PRODUCTS</a></li>
+    <li><a href="/about">ABOUT LÜ</a></li>
+    <li><a href="/projects">PROJECTS</a></li>
+  </ul>
+</nav>
+
+<script src="../scripts/burger.js"></script>
+
+<style>
+  #burger-menu {
+    text-indent: -9999px;
+    display: none;
+    border: none;
+    background: transparent;
+    margin: 25px;
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    position: relative;
+    z-index: 2;
+  }
+
+  #burger-menu {
+    display: block;
+    position: fixed;
+    right: 25px;
+  }
+  #burger-menu span,
+  #burger-menu span:before,
+  #burger-menu span:after {
+    background: #000000;
+    display: block;
+    height: 4px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    content: "";
+  }
+  #burger-menu span:before {
+    left: 0px;
+    top: -10px;
+    width: 55px;
+  }
+  #burger-menu span {
+    right: 0px;
+    top: 13px;
+    width: 55px;
+  }
+  #burger-menu span:after {
+    left: 0px;
+    top: 10px;
+    width: 55px;
+  }
+  #burger-menu.close span:before {
+    top: 0px;
+    transform: rotate(65deg);
+    width: 65px;
+    background: #000000;
+  }
+  #burger-menu.close span {
+    transform: rotate(-32deg);
+    top: 13px;
+    width: 65px;
+    background: #000000;
+  }
+  #burger-menu.close span:after {
+    top: 0px;
+    left: 0;
+    transform: rotate(65deg);
+    opacity: 0;
+    width: 0;
+    background: #000000;
+  }
+  #menu {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 180px;
+    transition: all 0.3s ease-in-out;
+  }
+  #menu.overlay {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 100px;
+    background: #fcf6ac;
+  }
+  #menu ul {
+    padding: 0;
+  }
+  #menu li {
+    list-style: none;
+    display: initial;
+  }
+  #menu a {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 120px;
+    color: #000000;
+    display: block;
+    margin-bottom: 30px;
+    text-decoration: none;
+  }
+  #menu:hover a {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 120px;
+    color: #000000;
+    display: block;
+    margin-bottom: 30px;
+    text-decoration: underline 4px solid #000000;
+  }
+  @media (max-width: 600px) {
+    #menu {
+      padding-left: 100px;
+    }
+    #menu a {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 70px;
+      color: #000000;
+      display: block;
+      margin-bottom: 30px;
+      text-decoration: none;
+    }
+    #menu:hover a {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 70px;
+      color: #000000;
+      display: block;
+      margin-bottom: 30px;
+      text-decoration: underline 4px solid #000000;
+    }
+  }
+</style>
