@@ -39,8 +39,7 @@ import Linkbutton from "../components/Linkbutton.astro";
           <img src="/projects3.webp" alt="Voice of iran dress" />
         </div>
         <div class="irantext">
-          <h2>VOICE OF IRAN</h2>
-          <h2>X LÜ ITEMS</h2>
+          <h2>VOICE OF IRAN X LÜ ITEMS</h2>
           <p>VOICE OF IRAN x LÜ ITEMS supports Iranian Women's struggle for freedom. Like a thread in a skein of yarn, we are bound together in a world that senses the pain carried by women who live without freedom!</p>
         </div>
         <div class="iranbutton">
@@ -53,7 +52,6 @@ import Linkbutton from "../components/Linkbutton.astro";
         <div class="polhemtext">
           <h2>Polhem showroom</h2>
           <p>The Papaya summer collection is exhibited at the pr agency Polhem during the month of May.</p>
-          <Linkbutton href="/products" text="SUPPORT VOICE OF IRAN " />
         </div>
       </section>
     </Main>
@@ -82,15 +80,25 @@ import Linkbutton from "../components/Linkbutton.astro";
       grid-area: 2 / 2 / 2 /2;
     }
     .iranpicture {
+      margin-top: 3%;
       grid-area: 3 / 1 /3/3;
     }
     .irantext {
       grid-area: 4 / 1 / 4 / 1;
+      width: 100%;
       padding-inline-start: 25px;
+    }
+    .irantext p {
       width: 90%;
+    }
+    .irantext h2 {
+      width: 100%;
+      margin: 0;
     }
     .iranbutton {
       grid-area: 4 / 2 / 4 / 3;
+      justify-self: end;
+      margin-inline-end: 25px;
     }
     .polhemtext {
       grid-area: 5 / 2 / 5 / 2;
@@ -98,6 +106,7 @@ import Linkbutton from "../components/Linkbutton.astro";
       width: 90%;
     }
     .polhempicture {
+      margin-top: 3%;
       grid-area: 5 / 1 / 5 / 1;
     }
   </style>
