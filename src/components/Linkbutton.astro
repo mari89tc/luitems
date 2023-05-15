@@ -2,99 +2,18 @@
 const { text, href = "/" } = Astro.props;
 ---
 
-<button>
-  <a href={href}>
-    <p>{text}</p>
-  </a>
-</button>
+<a href={href}>
+  <p>{text}</p>
+</a>
 
 <style>
-  button {
-    background-color: #fcf6ac;
-    border: none;
-    padding: 10px;
-    padding-left: 55px;
-    padding-right: 55px;
-    width: fit-content;
-  }
-  button:hover {
-    background-color: #000000;
-    text-decoration: none;
-    outline: none;
-    width: fit-content;
-    border: none;
-  }
-  button a {
+  a {
+    text-decoration: underline 2px #000000;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 24pt;
-    text-decoration: none;
+    font-size: 16pt;
+    line-height: 25pt;
+    text-transform: uppercase;
     color: #000000;
-  }
-  button p {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 24pt;
-    text-decoration: none;
-    color: #000000;
-  }
-  button a:hover {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 24pt;
-    text-decoration: none;
-    color: #fcf6ac;
-  }
-  button p:hover {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 24pt;
-    text-decoration: none;
-    color: #fcf6ac;
-  }
-  @media (max-width: 700px) {
-    button {
-      background-color: #fcf6ac;
-      border: none;
-      padding: 5px;
-      padding-left: 15px;
-      padding-right: 15px;
-      width: fit-content;
-    }
-    button:hover {
-      background-color: #000000;
-      text-decoration: none;
-      outline: none;
-      width: fit-content;
-      border: none;
-    }
-    button a {
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      font-size: 16pt;
-      text-decoration: none;
-      color: #000000;
-    }
-    button p {
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      font-size: 16pt;
-      text-decoration: none;
-      color: #000000;
-    }
-    button a:hover {
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      font-size: 16pt;
-      text-decoration: none;
-      color: #fcf6ac;
-    }
-    button p:hover {
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      font-size: 16pt;
-      text-decoration: none;
-      color: #fcf6ac;
-    }
   }
 </style>

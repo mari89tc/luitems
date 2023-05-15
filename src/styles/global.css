@@ -13,18 +13,21 @@ h1 {
   font-weight: 700;
   font-size: 150pt;
   line-height: 150pt;
+  text-transform: uppercase;
 }
 h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 100pt;
   line-height: 100pt;
+  text-transform: uppercase;
 }
 h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 40pt;
   line-height: 40pt;
+  text-transform: uppercase;
 }
 h4 {
   font-family: "Roboto", sans-serif;
@@ -37,12 +40,14 @@ h5 {
   font-weight: 500;
   font-size: 20pt;
   line-height: 30pt;
+  text-transform: uppercase;
 }
 p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16pt;
   line-height: 25pt;
+  text-transform: uppercase;
 }
 /* Fonte til mobil */
 @media (max-width: 700px) {
