@@ -16,31 +16,33 @@ import Main from "../layouts/Main.astro";
   </head>
   <body>
     <Main>
-        <section class="grid_1-1">
-          <div class="grid_picture">
+        <section class="grid_1-1"> 
+          <div class="grid_picture1">
             <img src="/about1.webp" alt="linn luders" />
           </div>
-          <div class="grid_text">
+          <div class="grid_text1">
             <h2>ABOUT LÜ ITEMS</h2>
-            <p>  THE ITMES ARE MADE BY LINN LÜDERS. SHE STARTED CROCHETING AS IT FELT MEDITATING IN AN OTHERWISE STRESSFUL EVERDAY LIFE. WE LIVE IN A PERFORMANCE AND QUICK FIX SOCIETY WHERE WE OFTEN FORGET OURSELVES AND EACH OTHER. CROCHETING AND DESIGN MADE HER PARTICULARLY AWARE OF THE IMPORTANCE OF SLOWNESS AND SUSTAINABILLTY IN ALL ASPECT OF OUR LIVES. LETS TAKE CARE OF OURSELVES, EACH OTHER AND THE PLANET.
+            <p>  THE ITEMS ARE MADE BY LINN LÜDERS. SHE STARTED CROCHETING AS IT FELT MEDITATING IN AN OTHERWISE STRESSFUL EVERDAY LIFE. WE LIVE IN A PERFORMANCE AND QUICK FIX SOCIETY WHERE WE OFTEN FORGET OURSELVES AND EACH OTHER. CROCHETING AND DESIGN MADE HER PARTICULARLY AWARE OF THE IMPORTANCE OF SLOWNESS AND SUSTAINABILLTY IN ALL ASPECT OF OUR LIVES. LETS TAKE CARE OF OURSELVES, EACH OTHER AND THE PLANET.
             </p>
           </div>
-        </section>
+       
     
-        <section class="grid_1-1-1">
-          <div class="grid_text">
+        
+          <div class="grid_text2">
             <h2>SLOWMESS AND SUSTAINABILITY</h2>
             <p> LÜ ITEMS IS A SLOW FASHION BRAND USING SUSTAINABLE MATERIALS. EVERY ITEMS IS UNIQUE AND MADE BY HAND. WE ARE PLACED IN THE HEART OF COPENHAGEN. THE PLANET CALLS FOR A NEW CONSIOUNESS AROUND MATERIALS - MENDING AND LONG LIFE DESIGNS. THAT'S THE ESSENCE OF OUR BRAND. SLOWNESS AND SUSTAINABILITY.
             </p>
           </div>
-          <div class="grid_picture">
+          <div class="grid_picture2">
             <img src="/about2.webp" alt="green dress" />
           </div>
-        </section>
+        
     
-        <section class="grid_1-1-1-1">
-          <img src="/about3.webp" alt="coming out of the water" />
-          <div class="grid_hey">
+        <div class="grid_picture3">
+           <img src="/about3.webp" alt="coming out of the water" /> 
+        </div>
+          
+          <div class="grid_text3">
             <div>
               <h2>SHIPPING AND RETURN</h2>
              
@@ -48,18 +50,18 @@ import Main from "../layouts/Main.astro";
                 IT IS NOT POSSIBLE TO RETURN YOUR ITEMS </p>
             </div>
            
-            <section class="grid_1-1-1-1-1">
-              <div class="grid_picture">
+            
+              <div class="grid_picture4">
             <img src="/about4.webp" alt="back with top on" />
               </div>
-              <div class="grid_text">
+              <div class="grid_text4">
                 <h2>PRODUCT DESCRIPTION</h2>
                 <p>
                     All of our products are made from recycled yarn. the products are designed to be durable and long-lasting, but it's important to wash them with care to extend their lifespan. 
                     The one size products fit sizes from XS to L.
                 </p>
               </div>
-            </section>
+            
           </div>
         </section>
       </Main>
@@ -68,7 +70,33 @@ import Main from "../layouts/Main.astro";
           display: grid;
           grid-template-columns: 1fr 1fr;
         }
-        .grid_1-1-1 {
+.grid_picture1 {
+    grid-area: 1/1/2/2;
+}
+.grid_text1 {
+    grid-area: 1/2/2/2;
+}
+.grid_text2 {
+    grid-area: 3 / 1 / 2 / 2;
+}
+.grid_picture2 {
+    grid-area: 3 / 2 / 2 / 2;
+}
+.grid_picture3 {
+    grid-area: 2 / 1 / 2 / 2;
+}
+.grid_text3 {
+    
+}
+.grid_picture4 {
+    grid-area: 3 / 3 / 3 / 4;
+}
+.grid_text4 {
+    grid-area: 4 / 1 / 3 / 2;
+}
+  
+
+        /* .grid_1-1-1 {
           display: grid;
           grid-template-columns: 1fr 1fr;
         }
@@ -81,7 +109,10 @@ import Main from "../layouts/Main.astro";
           display: grid;
           grid-template-columns: 1fr 1fr;
         }
-
+        .grid_picture {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+        } */
         
       </style>
   </body>
