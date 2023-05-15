@@ -6,10 +6,14 @@ import "../styles/global.css";
   <div class="insta_grid">
     <h4>AS SEEN ON INSTAGRAM</h4>
     <div class="img_grid">
-      <a href="https://www.instagram.com/lu.items/"><img src="/footer3.webp" alt="instagram post 1" /></a>
-      <a href="https://www.instagram.com/lu.items/"><img src="/footer2.webp" alt="instagram post 2" /></a>
-      <a href="https://www.instagram.com/lu.items/"><img src="/footer4.webp" alt="instagram post 3" /></a>
-      <a href="https://www.instagram.com/lu.items/"><img src="/footer1.webp" alt="instagram post 4" /></a>
+      <div class="container">
+        <a href="https://www.instagram.com/lu.items/"><img src="/footer3.webp" alt="instagram post 1" /></a>
+      </div>
+      <div class="container"><a href="https://www.instagram.com/lu.items/"><img src="/footer2.webp" alt="instagram post 2" /></a></div>
+      <div class="container">
+        <a href="https://www.instagram.com/lu.items/"><img src="/footer4.webp" alt="instagram post 3" /></a>
+      </div>
+      <div class="container"><a href="https://www.instagram.com/lu.items/"><img src="/footer1.webp" alt="instagram post 4" /></a></div>
     </div>
   </div>
   <div class="logo_grid">
@@ -78,9 +82,15 @@ import "../styles/global.css";
     width: auto;
     height: 100%;
   }
+  .img_grid a:hover {
+    opacity: 60%;
+  }
+  .container:hover {
+    background-image: url("/hoverinstagram.svg");
+  }
   .logo_grid {
     display: flex;
-    gap: 10px;
+    margin-top: 20px;
   }
   a {
     font-family: "Roboto", sans-serif;
