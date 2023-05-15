@@ -66,7 +66,7 @@
     color: #000000;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 16pt;
+    font-size: 16px;
     line-height: 25pt;
     display: block;
   }
@@ -93,45 +93,94 @@
   }
   button {
     background-color: #fcf6ac;
-    border: none;
-    padding: 25px;
-    padding-left: 55px;
-    padding-right: 55px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
     width: 550px;
+    border: solid 4px #fcf6ac;
+    color: #000000;
+    padding: 20px;
   }
   button:hover {
     background-color: #000000;
-    text-decoration: none;
-    outline: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
     width: 550px;
-    border: none;
-  }
-  button a {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 16pt;
-    text-decoration: none;
-    color: #000000;
-  }
-  button p {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 16pt;
-    text-decoration: none;
-    color: #000000;
-  }
-  button a:hover {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 16pt;
-    text-decoration: none;
+    border: solid 4px #000000;
     color: #fcf6ac;
+    padding: 20px;
   }
-  button p:hover {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 16pt;
-    text-decoration: none;
-    color: #fcf6ac;
+
+  @media (max-width: 600px) {
+    input {
+      width: 450px;
+      padding: 20px;
+      background-color: #ffffff;
+      text-decoration: none;
+      color: #000000;
+      border: #000000;
+      outline: 2px solid #000000;
+    }
+    input:focus {
+      width: 450px;
+      padding: 20px;
+      background-color: #ffffff;
+      text-decoration: none;
+      color: #000000;
+      border: #000000;
+      outline: 4px solid #000000;
+    }
+    label {
+      line-height: 45px;
+      color: #000000;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 25pt;
+      display: block;
+    }
+    textarea {
+      width: 450px;
+      padding: 20px;
+      background-color: #ffffff;
+      text-decoration: none;
+      color: #000000;
+      border: #000000;
+      outline: 2px solid #000000;
+    }
+    textarea:focus {
+      width: 450px;
+      padding: 20px;
+      background-color: #ffffff;
+      text-decoration: none;
+      color: #000000;
+      border: #000000;
+      outline: 4px solid #000000;
+    }
+    button {
+      background-color: #fcf6ac;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 32px;
+      width: 450px;
+      border: solid 4px #fcf6ac;
+      color: #000000;
+      padding: 20px;
+    }
+    button:hover {
+      background-color: #000000;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 32px;
+      width: 450px;
+      border: solid 4px #000000;
+      color: #fcf6ac;
+      padding: 20px;
+    }
   }
 </style>
