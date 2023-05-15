@@ -16,161 +16,72 @@ import Main from "../layouts/Main.astro";
   </head>
   <body>
     <Main>
-      <section class="grid_1-1 order2" id="about_us_linn">
-        <img src="/about1.webp" alt="linn showing the dress" />
-        <div>
-          <h2>ABOUT LÜ ITEMS</h2>
-          <p>
-            THE ITMES ARE MADE BY LINN LÜDERS. SHE STARTED CROCHETING AS IT FELT MEDITATING IN AN OTHERWISE STRESSFUL EVERDAY LIFE. WE LIVE IN A PERFORMANCE AND QUICK FIX SOCIETY WHERE WE OFTEN FORGET OURSELVES AND EACH OTHER. CROCHETING AND DESIGN MADE HER PARTICULARLY AWARE OF THE IMPORTANCE OF SLOWNESS AND SUSTAINABILLTY IN ALL ASPECT OF OUR LIVES. LETS TAKE CARE OF OURSELVES, EACH OTHER AND THE PLANET.
-          </p>
-        </div>
-      </section>
-      <section class="grid_1-1 order1" id="about_us_slow">
-        <img src="/about2.webp" alt="green dress" />
-        <div>
-          <h2>SLOWMESS AND SUSTAINABILITY</h2>
-          <p>
-         LÜ ITEMS IS A SLOW FASHION BRAND USING SUSTAINABLE MATERIALS. EVERY ITEMS IS UNIQUE AND MADE BY HAND. WE ARE PLACED IN THE HEART OF COPENHAGEN. THE PLANET CALLS FOR A NEW CONSIOUNESS AROUND MATERIALS - MENDING AND LONG LIFE DESIGNS. THAT'S THE ESSENCE OF OUR BRAND. SLOWNESS AND SUSTAINABILITY.
-          </p>
-        </div>
-      </section>
-
-      <section class="grid_1-1 order2" id="about_us_shipping">
-        <img src="/about3.webp" alt="coming out of the water" />
-        <div>
-          <h1>SHIPPING AND RETURN</h1>
-          <p>SHIPPING ONLY IN EUROPE. COSTUMER PAYS THE SHIPPING PRICE - WHICH IS AUTOMATICALLY REGULATED AFTER THE EUROPEAN STANDARD PRICE. 
-            IT IS NOT POSSIBLE TO RETURN YOUR ITEMS.</p>
-        </div>
-      </section>
-      <section class="grid_1-1 order1" id="about_us_product">
-        <img src="/about4.webp" alt="back with top" />
-        <div>
-          <h2>PRODUCT DESCRIPTION</h2>
-          <p>
-         All of our products are made from recycled yarn. the products are designed to be durable and long-lasting, but it's important to wash them with care to extend their lifespan. 
-            The one size products fit sizes from XS to L.
-          </p>
-        </div>
-      </section>
-</Main>
-<style>
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-}
-img {
-  max-width: 100%;
-}
-/* Fonte til desktop */
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 150pt;
-  line-height: 150pt;
-}
-h2 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 100pt;
-  line-height: 100pt;
-}
-h3 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 40pt;
-  line-height: 40pt;
-}
-h4 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 24pt;
-  line-height: 30pt;
-}
-h5 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 20pt;
-  line-height: 30pt;
-}
-p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 16pt;
-  line-height: 25pt;
-}
-/* Fonte til mobil */
-@media (max-width: 700px) {
-  h1 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 70pt;
-    line-height: 80pt;
-  }
-  h2 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 40pt;
-    line-height: 40pt;
-  }
-  h3 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 20pt;
-    line-height: 22pt;
-  }
-  h4 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 12pt;
-    line-height: 18pt;
-  }
-  h5 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 16pt;
-    line-height: 18pt;
-  }
-  p {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 12pt;
-    line-height: 18pt;
-  }
-}
-/* farver 
-body {
-    background-color: #FFFFFF;
-}
-h1 {
-    color: #000000;
-}
-button {
-    background-color: #FCF6AC;
-}
-*/
- .grid_1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-      }
-      section {
-        margin-bottom: 110px;
-        padding: 30px;
-      }
-      section {
-          margin-bottom: 110px;
-          padding: 30px;
+        <section class="grid_1-1">
+          <div class="grid_picture">
+            <img src="/about1.webp" alt="linn luders" />
+          </div>
+          <div class="grid_text">
+            <h2>ABOUT LÜ ITEMS</h2>
+            <p>  THE ITMES ARE MADE BY LINN LÜDERS. SHE STARTED CROCHETING AS IT FELT MEDITATING IN AN OTHERWISE STRESSFUL EVERDAY LIFE. WE LIVE IN A PERFORMANCE AND QUICK FIX SOCIETY WHERE WE OFTEN FORGET OURSELVES AND EACH OTHER. CROCHETING AND DESIGN MADE HER PARTICULARLY AWARE OF THE IMPORTANCE OF SLOWNESS AND SUSTAINABILLTY IN ALL ASPECT OF OUR LIVES. LETS TAKE CARE OF OURSELVES, EACH OTHER AND THE PLANET.
+            </p>
+          </div>
+        </section>
+    
+        <section class="grid_1-1-1">
+          <div class="grid_text">
+            <h2>SLOWMESS AND SUSTAINABILITY</h2>
+            <p> LÜ ITEMS IS A SLOW FASHION BRAND USING SUSTAINABLE MATERIALS. EVERY ITEMS IS UNIQUE AND MADE BY HAND. WE ARE PLACED IN THE HEART OF COPENHAGEN. THE PLANET CALLS FOR A NEW CONSIOUNESS AROUND MATERIALS - MENDING AND LONG LIFE DESIGNS. THAT'S THE ESSENCE OF OUR BRAND. SLOWNESS AND SUSTAINABILITY.
+            </p>
+          </div>
+          <div class="grid_picture">
+            <img src="/about2.webp" alt="green dress" />
+          </div>
+        </section>
+    
+        <section class="grid_1-1-1-1">
+          <img src="/about3.webp" alt="coming out of the water" />
+          <div class="grid_hey">
+            <div>
+              <h2>SHIPPING AND RETURN</h2>
+             
+              <p>SHIPPING ONLY IN EUROPE. COSTUMER PAYS THE SHIPPING PRICE - WHICH IS AUTOMATICALLY REGULATED AFTER THE EUROPEAN STANDARD PRICE. 
+                IT IS NOT POSSIBLE TO RETURN YOUR ITEMS </p>
+            </div>
+           
+            <section class="grid_1-1-1-1-1">
+              <div class="grid_picture">
+            <img src="/about4.webp" alt="back with top on" />
+              </div>
+              <div class="grid_text">
+                <h2>PRODUCT DESCRIPTION</h2>
+                <p>
+                    All of our products are made from recycled yarn. the products are designed to be durable and long-lasting, but it's important to wash them with care to extend their lifespan. 
+                    The one size products fit sizes from XS to L.
+                </p>
+              </div>
+            </section>
+          </div>
+        </section>
+      </Main>
+      <style>
+        .grid_1-1 {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
         }
-        .order2 {
-          order: -1;
+        .grid_1-1-1 {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
         }
-        .order1 {
-          order: -1;
+    
+        .grid_1-1-1-1 {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
         }
-
-</style>
+        .grid_1-1-1-1-1 {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+      </style>
   </body>
-</html>
+      </html>
+    
