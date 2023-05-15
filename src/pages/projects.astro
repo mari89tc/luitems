@@ -32,21 +32,53 @@ import Linkbutton from "../components/Linkbutton.astro";
           <h2>MERMAID DRESS IN VOGUE</h2>
           <p>“While it is not quite a time to bathe in the sun at the beach, it still dances on your skin through light crochet dresses in the archipelago” - VOGUE SCANDINAVIA</p>
           <Linkbutton href="/products" text="Shop the dress" />
-          <div class="grid_picture">
-            <img src="/projects2.webp" alt="Mermaid dress in vouge" />
-          </div>
+        </div>
+        <div class="grid_picture">
+          <img src="/projects2.webp" alt="Mermaid dress in vouge" />
         </div>
       </section>
-      <section class="grid_iran">
-        <div class="grid_picture">
-          <img src="/projects3.webp" alt="Voice of iran dress" />
-        </div>
-        <div class="grid_text">
-          <h2>MERMAID DRESS IN VOGUE</h2>
-          <p>“While it is not quite a time to bathe in the sun at the beach, it still dances on your skin through light crochet dresses in the archipelago” - VOGUE SCANDINAVIA</p>
-          <Linkbutton href="/products" text="Shop here" />
+      <section class="iran">
+        <img src="/projects3.webp" alt="Voice of iran dress" />
+        <div class="grid_iran">
+          <div>
+            <h2>VOICE OF IRAN</h2>
+            <h2>X LÜ ITEMS</h2>
+            <p>VOICE OF IRAN x LÜ ITEMS supports Iranian Women's struggle for freedom. Like a thread in a skein of yarn, we are bound together in a world that senses the pain carried by women who live without freedom!</p>
+          </div>
+          <div>
+            <Linkbutton href="/products" text="SUPPORT VOICE OF IRAN " />
+          </div>
+          <section class="grid_polhem">
+            <div class="grid_picture">
+              <img src="/projects4.webp" alt="Items from polhem showroom" />
+            </div>
+            <div class="grid_text">
+              <h2>Polhem showroom</h2>
+              <p>The Papaya summer collection is exhibited at the pr agency Polhem during the month of May.</p>
+              <Linkbutton href="/products" text="SUPPORT VOICE OF IRAN " />
+            </div>
+          </section>
         </div>
       </section>
     </Main>
+    <style>
+      .grid_papaya {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .grid_vouge {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .grid_iran {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+      }
+      .grid_polhem {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    </style>
   </body>
 </html>
