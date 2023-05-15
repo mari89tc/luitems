@@ -1,0 +1,12 @@
+---
+const url = "https://bhbgbtxgwftidykearaz.supabase.co/rest/v1/products";
+const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoYmdidHhnd2Z0aWR5a2VhcmF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODMwMTM2NjcsImV4cCI6MTk5ODU4OTY2N30.KjyWOsFYOHmmoEoBuf75grof4iS8KONyCwqlmIDcaNE";
+const options = {
+  method: "GET",
+  headers: {
+    apikey: api,
+  },
+};
+const data = await fetch(url, options).then((res) => res.json());
+console.log(data);
+---

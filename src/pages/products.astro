@@ -1,6 +1,13 @@
 ---
 import Form from "../components/Form.astro";
 import Main from "../layouts/Main.astro";
+const data = await fetch("https://bhbgbtxgwftidykearaz.supabase.co/rest/v1/products", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoYmdidHhnd2Z0aWR5a2VhcmF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODMwMTM2NjcsImV4cCI6MTk5ODU4OTY2N30.KjyWOsFYOHmmoEoBuf75grof4iS8KONyCwqlmIDcaNE",
+  },
+}).then((res) => res.json());
+console.log(data);
 ---
 
 <html lang="da">
