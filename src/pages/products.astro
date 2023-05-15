@@ -1,5 +1,4 @@
 ---
-import Footer from "../components/Footer.astro";
 import Form from "../components/Form.astro";
 import Main from "../layouts/Main.astro";
 ---
@@ -17,8 +16,20 @@ import Main from "../layouts/Main.astro";
   </head>
   <body>
     <Main>
-      <h2>PRODUCTS</h2>
-      <Form />
+      <section>
+        <h2>PRODUCTS</h2>
+        <div class="grid_1"></div>
+        <Form />
+      </section>
     </Main>
   </body>
 </html>
+<style>
+  section {
+    display: grid;
+  }
+  h2 {
+    justify-self: center;
+    align-self: center;
+  }
+</style>

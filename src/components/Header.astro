@@ -1,20 +1,50 @@
-<button id="burger-menu">
-  Menu
-  <span></span>
-</button>
+<header>
+  <div id="mainmenu">
+    <slot name="header-slot" />
+    <div class="logo">
+      <a href="/"><img src="/Logo.svg" alt="logo" /></a>
+    </div>
 
-<nav id="menu">
-  <ul>
-    <li><a href="/">HOME</a></li>
-    <li><a href="/products">PRODUCTS</a></li>
-    <li><a href="/about">ABOUT LÜ</a></li>
-    <li><a href="/projects">PROJECTS</a></li>
-  </ul>
-</nav>
+    <button id="burger-menu">
+      Menu
+      <span></span>
+    </button>
+
+    <nav id="menu">
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/products">PRODUCTS</a></li>
+        <li><a href="/about">ABOUT LÜ</a></li>
+        <li><a href="/projects">PROJECTS</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <script src="../scripts/burger.js"></script>
 
 <style>
+  #mainmenu {
+    display: grid;
+  }
+  #mainmenu > * {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  header {
+    background-color: #fcf6ac;
+  }
+  .logo {
+    width: 5%;
+    padding: 7px;
+    z-index: 3;
+  }
+  @media (max-width: 600px) {
+    .logo {
+      width: 10%;
+      z-index: 3;
+    }
+  }
   #burger-menu {
     text-indent: -9999px;
     display: none;
@@ -99,6 +129,10 @@
     opacity: 1;
     padding-top: 100px;
     background: #fcf6ac;
+  }
+  .logo.overlay {
+    visibility: visible;
+    opacity: 1;
   }
   #menu ul {
     padding: 0;
