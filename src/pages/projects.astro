@@ -17,68 +17,97 @@ import Linkbutton from "../components/Linkbutton.astro";
   </head>
   <body>
     <Main>
-      <section class="grid_papaya">
-        <div class="grid_picture">
-          <img src="/projects2.webp" alt="video" />
+      <section class="grid_main">
+        <div class="papayapicture">
+          <video width="100%" height="100%" autoplay muted loop src="/video2.mp4"></video>
         </div>
-        <div class="grid_text">
+        <div class="papayatext">
           <h2>Papaya summer</h2>
           <p>THE SPRING SUMMER 2023 COLLECTION COMES IN ALL Colours AND SHAPES. The collection addresses the diversity of different female bodies.</p>
-          <Linkbutton href="/products" text="Shop here" />
+          <div class="linkbutton"><Linkbutton href="/products" text="Shop here" /></div>
         </div>
-      </section>
-      <section class="grid_vouge">
-        <div class="grid_text">
+
+        <div class="voguetext">
           <h2>MERMAID DRESS IN VOGUE</h2>
           <p>“While it is not quite a time to bathe in the sun at the beach, it still dances on your skin through light crochet dresses in the archipelago” - VOGUE SCANDINAVIA</p>
-          <Linkbutton href="/products" text="Shop the dress" />
+          <div class="linkbutton"><Linkbutton href="/products" text="Shop the dress" /></div>
         </div>
-        <div class="grid_picture">
+        <div class="vougepicture">
           <img src="/projects2.webp" alt="Mermaid dress in vouge" />
         </div>
-      </section>
-      <section class="iran">
-        <img src="/projects3.webp" alt="Voice of iran dress" />
-        <div class="grid_iran">
-          <div>
-            <h2>VOICE OF IRAN</h2>
-            <h2>X LÜ ITEMS</h2>
-            <p>VOICE OF IRAN x LÜ ITEMS supports Iranian Women's struggle for freedom. Like a thread in a skein of yarn, we are bound together in a world that senses the pain carried by women who live without freedom!</p>
-          </div>
-          <div>
-            <Linkbutton href="/products" text="SUPPORT VOICE OF IRAN " />
-          </div>
-          <section class="grid_polhem">
-            <div class="grid_picture">
-              <img src="/projects4.webp" alt="Items from polhem showroom" />
-            </div>
-            <div class="grid_text">
-              <h2>Polhem showroom</h2>
-              <p>The Papaya summer collection is exhibited at the pr agency Polhem during the month of May.</p>
-              <Linkbutton href="/products" text="SUPPORT VOICE OF IRAN " />
-            </div>
-          </section>
+        <div class="iranpicture">
+          <img src="/projects3.webp" alt="Voice of iran dress" />
+        </div>
+        <div class="irantext">
+          <h2>VOICE OF IRAN X LÜ ITEMS</h2>
+          <p>VOICE OF IRAN x LÜ ITEMS supports Iranian Women's struggle for freedom. Like a thread in a skein of yarn, we are bound together in a world that senses the pain carried by women who live without freedom!</p>
+        </div>
+        <div class="iranbutton">
+          <Linkbutton href="/products" text="SUPPORT VOICE OF IRAN " />
+        </div>
+
+        <div class="polhempicture">
+          <img src="/projects4.webp" alt="Items from polhem showroom" />
+        </div>
+        <div class="polhemtext">
+          <h2>Polhem showroom</h2>
+          <p>The Papaya summer collection is exhibited at the pr agency Polhem during the month of May.</p>
         </div>
       </section>
     </Main>
-    <style>
-      .grid_papaya {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-      .grid_vouge {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .grid_iran {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-      }
-      .grid_polhem {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-    </style>
   </body>
+  <style>
+    .grid_main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .papayapicture {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .papayatext {
+      grid-area: 1 / 2 / 2 / 2;
+      padding-inline-start: 25px;
+      width: 90%;
+    }
+    .voguetext {
+      grid-area: 2 / 1 / 2 / 2;
+      padding-inline-start: 25px;
+      width: 90%;
+    }
+
+    .voguepicture {
+      grid-area: 2 / 2 / 2 /2;
+    }
+    .iranpicture {
+      margin-top: 3%;
+      grid-area: 3 / 1 /3/3;
+    }
+    .irantext {
+      grid-area: 4 / 1 / 4 / 1;
+      width: 100%;
+      padding-inline-start: 25px;
+    }
+    .irantext p {
+      width: 90%;
+    }
+    .irantext h2 {
+      width: 100%;
+      margin: 0;
+    }
+    .iranbutton {
+      grid-area: 4 / 2 / 4 / 3;
+      justify-self: end;
+      margin-inline-end: 25px;
+    }
+    .polhemtext {
+      grid-area: 5 / 2 / 5 / 2;
+      padding-inline-start: 25px;
+      width: 90%;
+    }
+    .polhempicture {
+      margin-top: 3%;
+      grid-area: 5 / 1 / 5 / 1;
+    }
+  </style>
 </html>
