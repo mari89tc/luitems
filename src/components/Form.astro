@@ -1,25 +1,37 @@
+---
+import "../styles/global.css";
+---
+
 <section>
   <h3>CUSTOMIZE YOUR OWN LÜ ITEM HERE</h3>
-  <form>
-    <label for="title">ITEM</label>
-    <input id="title" name="title" type="text" required />
-
-    <label for="title">COLOR</label>
-    <input id="title" name="title" type="text" required />
-
-    <label for="email"><br />MAIL<br /></label>
-    <input id="email" type="text" name="email" />
-
-    <label for="long">SIZE, LENGTH, OTHER PREFERENCES</label>
-    <textarea id="long" name="long" rows="6" required></textarea>
-
-    <button type="submit">SEND REQUEST</button>
+  <form class="forms" name="request">
+    <div>
+      <label for="title">ITEM</label>
+      <input id="title" name="title" type="text" required />
+    </div>
+    <div>
+      <label for="title">COLOR</label>
+      <input id="title" name="title" type="text" required />
+    </div>
+    <div>
+      <label for="email"><br />MAIL<br /></label>
+      <input id="email" type="text" name="email" />
+    </div>
+    <div>
+      <label for="long">SIZE, LENGTH, OTHER PREFERENCES</label>
+      <textarea id="long" name="long" rows="6" required></textarea>
+    </div>
+    <div class="sendbut">
+      <button>SEND REQUEST</button>
+    </div>
   </form>
 </section>
 
 <style>
   section {
     display: grid;
+    padding-top: 60px;
+    padding: 30px;
   }
   section h3 {
     justify-self: center;
@@ -36,6 +48,7 @@
     text-decoration: none;
     color: #000000;
     border: #000000;
+    outline: 2px solid #000000;
   }
   input:focus {
     width: 550px;
@@ -44,7 +57,7 @@
     text-decoration: none;
     color: #000000;
     border: #000000;
-    outline: 2px solid #000000;
+    outline: 4px solid #000000;
   }
   label {
     line-height: 45px;
@@ -53,5 +66,70 @@
     font-weight: 400;
     font-size: 16pt;
     line-height: 25pt;
+    display: block;
+  }
+  textarea {
+    width: 550px;
+    padding: 20px;
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #000000;
+    border: #000000;
+    outline: 2px solid #000000;
+  }
+  textarea:focus {
+    width: 550px;
+    padding: 20px;
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #000000;
+    border: #000000;
+    outline: 4px solid #000000;
+  }
+  .sendbut {
+    padding-top: 50px;
+  }
+  button {
+    background-color: #fcf6ac;
+    border: none;
+    padding: 25px;
+    padding-left: 55px;
+    padding-right: 55px;
+    width: 550px;
+  }
+  button:hover {
+    background-color: #000000;
+    text-decoration: none;
+    outline: none;
+    width: 550px;
+    border: none;
+  }
+  button a {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    text-decoration: none;
+    color: #000000;
+  }
+  button p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    text-decoration: none;
+    color: #000000;
+  }
+  button a:hover {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    text-decoration: none;
+    color: #fcf6ac;
+  }
+  button p:hover {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    text-decoration: none;
+    color: #fcf6ac;
   }
 </style>
