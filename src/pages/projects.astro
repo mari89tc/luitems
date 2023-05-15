@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Main from "../layouts/Main.astro";
+import Linkbutton from "../components/Linkbutton.astro";
 ---
 
 <html lang="da">
@@ -16,7 +17,36 @@ import Main from "../layouts/Main.astro";
   </head>
   <body>
     <Main>
-      <h2>Papaya summer</h2>
+      <section class="grid_papaya">
+        <div class="grid_picture">
+          <img src="/projects2.webp" alt="video" />
+        </div>
+        <div class="grid_text">
+          <h2>Papaya summer</h2>
+          <p>THE SPRING SUMMER 2023 COLLECTION COMES IN ALL Colours AND SHAPES. The collection addresses the diversity of different female bodies.</p>
+          <Linkbutton href="/products" text="Shop here" />
+        </div>
+      </section>
+      <section class="grid_vouge">
+        <div class="grid_text">
+          <h2>MERMAID DRESS IN VOGUE</h2>
+          <p>“While it is not quite a time to bathe in the sun at the beach, it still dances on your skin through light crochet dresses in the archipelago” - VOGUE SCANDINAVIA</p>
+          <Linkbutton href="/products" text="Shop the dress" />
+          <div class="grid_picture">
+            <img src="/projects2.webp" alt="Mermaid dress in vouge" />
+          </div>
+        </div>
+      </section>
+      <section class="grid_iran">
+        <div class="grid_picture">
+          <img src="/projects3.webp" alt="Voice of iran dress" />
+        </div>
+        <div class="grid_text">
+          <h2>MERMAID DRESS IN VOGUE</h2>
+          <p>“While it is not quite a time to bathe in the sun at the beach, it still dances on your skin through light crochet dresses in the archipelago” - VOGUE SCANDINAVIA</p>
+          <Linkbutton href="/products" text="Shop here" />
+        </div>
+      </section>
     </Main>
   </body>
 </html>
