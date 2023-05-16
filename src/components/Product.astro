@@ -1,2 +1,14 @@
 ---
+const { data } = Astro.props;
+// function getFirstNChars(name, price, color) {
+//     return name.
+// }
 ---
+
+<article>
+  <a href="/products/" +data.id> <img src={data.img} alt={data.name} /></a>
+
+  <h4>{data.name}</h4>
+  <h4>{data.price}</h4>
+  <p>{data.color}</p>
+</article>

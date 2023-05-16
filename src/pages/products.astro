@@ -1,57 +1,19 @@
 ---
 import Form from "../components/Form.astro";
 import Main from "../layouts/Main.astro";
-const url = "https://bhbgbtxgwftidykearaz.supabase.co/rest/v1/products?soldout=eq.false";
-const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoYmdidHhnd2Z0aWR5a2VhcmF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODMwMTM2NjcsImV4cCI6MTk5ODU4OTY2N30.KjyWOsFYOHmmoEoBuf75grof4iS8KONyCwqlmIDcaNE";
-const options = {
-  method: "GET",
-  headers: {
-    apikey: api,
-  },
-};
-const data = await fetch(url, options)
-  .then((res) => res.json())
-  .then((data) => showProduct(data));
-console.log(data);
-function showProduct(product) {
-  console.log(product);
-  document.querySelector;
-}
+import Products from "../components/Products.astro";
 ---
 
-<html lang="da">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/faviconlogo.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-    <title>LÜ ITEMS</title>
-  </head>
-  <body>
-    <Main>
-      <section>
-        <h2>PRODUCTS</h2>
-        <section class="grid_1">
-          <template id="productTemplate">
-            <article class="product">
-              <div>
-                <a href="/product">
-                  <img src="https://bhbgbtxgwftidykearaz.supabase.co/rest/v1/products?select=img" alt="Product" />
-                </a>
-                <h4>PRODUCT NAME</h4>
-                <h4 class="price">Price</h4>
-              </div>
-            </article>
-          </template>
-        </section>
-        <Form />
-      </section>
-    </Main>
-  </body>
-</html>
+<Main>
+  <section>
+    <h2>PRODUCTS</h2>
+    <section class="grid_1">
+      <Products />
+    </section>
+    <Form />
+  </section>
+</Main>
+
 <style>
   section {
     display: grid;

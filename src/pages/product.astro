@@ -1,0 +1,23 @@
+---
+import Button from "../components/Button.astro";
+import Form from "../components/Form.astro";
+import Linkbutton from "../components/Linkbutton.astro";
+import Main from "../layouts/Main.astro";
+---
+
+<Main>
+  <section>
+    <Linkbutton href="/products" text="BACK TO PRODUCTS" />
+    <section class="productSite">
+      <img src="https://bhbgbtxgwftidykearaz.supabase.co/rest/v1/products?select=img" alt="Product" />
+      <div class="cart">
+        <h3>Productname</h3>
+        <h3 class="price"></h3>
+      </div>
+      <Button text="ADD TO CART" />
+      <Linkbutton href="/about" text="GO TO PRODUCT DESCRIPTION" />
+    </section>
+    <Form />
+  </section>
+</Main>
+<style></style>
