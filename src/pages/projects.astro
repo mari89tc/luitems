@@ -19,35 +19,35 @@ import Linkbutton from "../components/Linkbutton.astro";
     <Main>
       <section class="grid_main">
         <div class="papayapicture">
-          <video width="100%" height="100%" autoplay muted loop src="/video2.mp4"></video>
+          <video width="100%" height="100%" autoplay muted loop src="/projects/papaya.mp4"></video>
         </div>
         <div class="papayatext">
           <h2>Papaya summer</h2>
           <p>THE SPRING SUMMER 2023 COLLECTION COMES IN ALL Colours AND SHAPES. The collection addresses the diversity of different female bodies.</p>
-          <div class="linkbutton"><Linkbutton href="/products" text="Shop here" /></div>
+          <div class="papayabutton"><Linkbutton href="/products" text="Shop here" /></div>
         </div>
 
         <div class="voguetext">
           <h2>MERMAID DRESS IN VOGUE</h2>
           <p>“While it is not quite a time to bathe in the sun at the beach, it still dances on your skin through light crochet dresses in the archipelago” - VOGUE SCANDINAVIA</p>
-          <div class="linkbutton"><Linkbutton href="/products" text="Shop the dress" /></div>
+          <div class="vougebutton"><Linkbutton href="/products" text="Shop the dress" /></div>
         </div>
         <div class="vougepicture">
-          <img src="/projects2.webp" alt="Mermaid dress in vouge" />
+          <img src="/projects/vouge.webp" alt="Mermaid dress in vouge" />
         </div>
         <div class="iranpicture">
-          <img src="/projects3.webp" alt="Voice of iran dress" />
+          <img src="/projects/iran.webp" alt="Voice of iran dress" />
         </div>
         <div class="irantext">
-          <h2>VOICE OF IRAN X LÜ ITEMS</h2>
+          <h2><span style="color: #FCF6AC">VOICE OF IRAN</span> X LÜ ITEMS</h2>
           <p>VOICE OF IRAN x LÜ ITEMS supports Iranian Women's struggle for freedom. Like a thread in a skein of yarn, we are bound together in a world that senses the pain carried by women who live without freedom!</p>
         </div>
         <div class="iranbutton">
-          <Linkbutton href="/products" text="SUPPORT VOICE OF IRAN " />
+          <Linkbutton href="https://www.voiceofiran.dk/" text="SUPPORT VOICE OF IRAN" />
         </div>
 
         <div class="polhempicture">
-          <img src="/projects4.webp" alt="Items from polhem showroom" />
+          <img src="/projects/polhem.webp" alt="Items from polhem showroom" />
         </div>
         <div class="polhemtext">
           <h2>Polhem showroom</h2>
@@ -57,57 +57,157 @@ import Linkbutton from "../components/Linkbutton.astro";
     </Main>
   </body>
   <style>
-    .grid_main {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    .papayapicture video {
+      object-fit: cover;
+    }
+    @media (max-width: 600px) {
+      .grid_main {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      p,
+      h2,
+      .papayabutton,
+      .vougebutton,
+      .iranbutton {
+        padding-inline-start: 8%;
+        max-width: 90%;
+      }
+
+      .papayaptext {
+        order: 1;
+      }
+
+      .papayatext h2 {
+        width: 50%;
+      }
+
+      .papayapicture {
+        order: 2;
+        padding-top: 20px;
+      }
+      .vougepicture {
+        order: 2;
+        padding-top: 20px;
+      }
+      .voguetext {
+        order: 4;
+      }
+
+      .voguetext h2 {
+        width: 80%;
+      }
+
+      .irantext h2 {
+        position: absolute;
+        top: 2045px;
+        width: 70%;
+      }
+      .irantext p {
+        padding-top: 50px;
+      }
+
+      .iranpicture {
+        order: 5;
+        position: relative;
+        padding-top: 20px;
+      }
+      .irantext {
+        order: 6;
+      }
+      .iranbutton {
+        order: 7;
+      }
+      .polhempicture {
+        order: 8;
+        padding-top: 20px;
+      }
+      .polhemtext {
+        order: 9;
+      }
+      .polhemtext h2 {
+        width: 50%;
+      }
     }
 
-    .papayapicture {
-      grid-area: 1 / 1 / 2 / 2;
-    }
-    .papayatext {
-      grid-area: 1 / 2 / 2 / 2;
-      padding-inline-start: 25px;
-      width: 90%;
-    }
-    .voguetext {
-      grid-area: 2 / 1 / 2 / 2;
-      padding-inline-start: 25px;
-      width: 90%;
-    }
+    @media (min-width: 600px) {
+      .grid_main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .papayabutton {
+        padding-top: 83%;
+      }
+      .voguetext p {
+        padding-top: 50%;
+      }
+      .voguetext p {
+        padding-top: 50%;
+      }
 
-    .voguepicture {
-      grid-area: 2 / 2 / 2 /2;
-    }
-    .iranpicture {
-      margin-top: 3%;
-      grid-area: 3 / 1 /3/3;
-    }
-    .irantext {
-      grid-area: 4 / 1 / 4 / 1;
-      width: 100%;
-      padding-inline-start: 25px;
-    }
-    .irantext p {
-      width: 90%;
-    }
-    .irantext h2 {
-      width: 100%;
-      margin: 0;
-    }
-    .iranbutton {
-      grid-area: 4 / 2 / 4 / 3;
-      justify-self: end;
-      margin-inline-end: 25px;
-    }
-    .polhemtext {
-      grid-area: 5 / 2 / 5 / 2;
-      padding-inline-start: 25px;
-      width: 90%;
-    }
-    .polhempicture {
-      margin-top: 3%;
-      grid-area: 5 / 1 / 5 / 1;
+      .voguetext h2 {
+        position: absolute;
+        width: 140%;
+      }
+
+      .vougebutton {
+        padding-top: 58%;
+        text-align: end;
+      }
+      .irantext p {
+        width: 90%;
+        padding-top: 20%;
+      }
+      .papayapicture {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      .papayatext {
+        grid-area: 1 / 2 / 2 / 2;
+        padding-inline-start: 25px;
+        width: 90%;
+      }
+      .voguetext {
+        grid-area: 2 / 1 / 2 / 2;
+        position: relative;
+        padding-inline-start: 25px;
+        width: 90%;
+      }
+
+      .voguepicture {
+        grid-area: 2 / 2 / 2 /2;
+      }
+
+      .iranpicture {
+        margin-top: 3%;
+        grid-area: 3 / 1 /3/3;
+      }
+      .irantext {
+        position: relative;
+        grid-area: 4 / 1 / 4 / 1;
+        width: 100%;
+        padding-inline-start: 25px;
+      }
+      .irantext h2 {
+        width: 100%;
+        margin: 0;
+        position: absolute;
+        bottom: 150px;
+      }
+      .iranbutton {
+        grid-area: 4 / 2 / 4 / 3;
+        justify-self: end;
+        margin-inline-end: 25px;
+      }
+      .polhemtext {
+        grid-area: 5 / 2 / 5 / 2;
+        padding-inline-start: 25px;
+        width: 90%;
+      }
+      .polhempicture {
+        padding-top: 8%;
+        grid-area: 5 / 1 / 5 / 1;
+      }
     }
   </style>
 </html>
