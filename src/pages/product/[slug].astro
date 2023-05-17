@@ -29,7 +29,12 @@ import Form from "../../components/Form.astro";
 <Main>
   <Linkbutton href="/products" text="BACK TO PRODUCTS" />
   <section>
-    <img src={"/database/" + singleProduct.img} alt={singleProduct.name} />
+    <img src={"/productlist/" + singleProduct.img + "-front.webp"} alt={singleProduct.name} />
+    <div class="grid_1">
+      <img src={"/productlist/" + singleProduct.img + "-back.webp"} alt={singleProduct.name} />
+      <img src={"/productlist/" + singleProduct.img + "-side.webp"} alt={singleProduct.name} />
+    </div>
+
     <h4>{singleProduct.name}</h4>
     <h4>{singleProduct.price}</h4>
     <p>{singleProduct.colour}</p>
@@ -44,5 +49,8 @@ import Form from "../../components/Form.astro";
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .grid_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 </style>
-<!-- <img src={"/database/" + singleProduct.img + "-front.webp"} alt="" />  -->

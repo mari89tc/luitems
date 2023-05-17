@@ -6,12 +6,11 @@ const { data } = Astro.props;
 ---
 
 <article>
-  <a href={"/product/" + data.slug}><img src={"/database/" + data.img} ' alt={data.name} /></a>
+  <a href={"/product/" + data.slug}><img src={"/productlist/" + data.img + "-front.webp"} ' alt={data.name} /></a>
   <div>
     <h4>{data.name}</h4>
     <h4>{data.price}</h4>
   </div>
-  <p>{data.colour}</p>
 </article>
 
 <style></style>
