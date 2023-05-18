@@ -11,7 +11,7 @@ import "../styles/global.css";
     autoplay
     muted
     loop
-    src="/index/forsidevideo1.mp4"></video>
+    src="/index/forsidevideo1.webm"></video>
 
   <div class="shopcollection">
     <Linkbutton text="SHOP SUMMER COLLECTION HERE" />
@@ -25,11 +25,11 @@ import "../styles/global.css";
       <h3>SLOWNESS AND SUSTAINABILITY</h3>
     </div>
     <div class="LU-img">
-      <img src="/index/forside1.webp" alt="img of dress" />
+      <img src="/index/closeupdress.webp" alt="img of dress" />
     </div>
 
     <div class="voguedress-img">
-      <img src="/index/forside2.webp" alt="Dress from vogue" />
+      <img src="/index/voguedress.webp" alt="Dress from vogue" />
     </div>
     <div class="voguedress-text">
       <h2>MERMAID DRESS IN VOGUE</h2>
@@ -39,7 +39,7 @@ import "../styles/global.css";
     </div>
 
     <div class="iran-img">
-      <img src="/projects/iran.webp" alt="Voice of iran image" />
+      <img src="/index/irandress.webp" alt="Voice of iran image" />
     </div>
     <div class="iran-text">
       <h2><span style="color: #FCF6AC">VOICE OF IRAN</span> X LÜ ITEMS</h2>
@@ -56,16 +56,15 @@ import "../styles/global.css";
     .shopcollection {
       display: flex;
       justify-content: center;
-      padding-top: 10px;
+      padding-top: 5px;
       padding-bottom: 10px;
     }
     .grid-container {
       display: grid;
       grid-template-columns: 1fr;
     }
-    h3,
+
     h2,
-    h1,
     .vogue-button,
     .vougebutton,
     .iran-button {
@@ -76,6 +75,7 @@ import "../styles/global.css";
       order: 1;
       display: flex;
       justify-content: center;
+      margin: 0;
     }
     .LU-text h3 {
       position: absolute;
@@ -90,6 +90,7 @@ import "../styles/global.css";
     }
     .voguedress-text {
       order: 3;
+      width: 90%;
     }
     .voguedress-text h2 {
       margin: 0;
@@ -110,7 +111,7 @@ import "../styles/global.css";
     }
     .iran-text h2 {
       position: absolute;
-      top: 2151px;
+      top: 1920px;
       width: 70%;
     }
     .iran-button {
