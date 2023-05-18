@@ -7,10 +7,15 @@ const { data } = Astro.props;
 
 <article>
   <a href={"/product/" + data.slug}><img src={"/productlist/" + data.img + "-front.webp"} ' alt={data.name} /></a>
-  <div>
+  <div class="grid_1">
     <h4>{data.name}</h4>
     <h4>{data.price}</h4>
   </div>
 </article>
 
-<style></style>
+<style>
+  .grid_1 {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
