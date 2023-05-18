@@ -7,9 +7,9 @@ import Products from "../components/Products.astro";
 <Main>
   <section>
     <h2>PRODUCTS</h2>
-    <section class="grid_1">
+    <article class="grid_1">
       <Products />
-    </section>
+    </article>
     <Form />
   </section>
 </Main>
@@ -30,5 +30,13 @@ import Products from "../components/Products.astro";
     margin-bottom: 50px;
     justify-content: center;
     align-self: center;
+  }
+  @media (max-width: 600px) {
+    .grid_1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 10px;
+      gap: 20px;
+    }
   }
 </style>

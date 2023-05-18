@@ -38,12 +38,7 @@
     padding: 7px;
     z-index: 3;
   }
-  @media (max-width: 600px) {
-    .logo {
-      width: 10%;
-      z-index: 3;
-    }
-  }
+
   #burger-menu {
     text-indent: -9999px;
     display: none;
@@ -163,8 +158,18 @@
     text-decoration: underline 4px solid #000000;
   }
   @media (max-width: 600px) {
+    .logo {
+      width: 12%;
+      z-index: 3;
+    }
     #menu {
-      padding-left: 100px;
+      padding-left: 60px;
+    }
+    #burger-menu {
+      display: block;
+      position: fixed;
+      right: 5px;
+      top: -10px;
     }
     #menu a {
       font-family: "Roboto", sans-serif;
