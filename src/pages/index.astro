@@ -48,6 +48,12 @@ import "../styles/global.css";
 <style>
   /* MOBILE VERSION */
   @media (max-width: 600px) {
+    .shopcollection {
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
     .grid-container {
       display: grid;
       grid-template-columns: 1fr;
@@ -63,12 +69,25 @@ import "../styles/global.css";
     }
     .LU-text {
       order: 1;
+      display: flex;
+      justify-content: center;
+    }
+    .LU-text h3 {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      top: 450px;
     }
     .LU-img {
       order: 2;
+      padding-bottom: 70px;
     }
     .voguedress-text {
       order: 3;
+    }
+    .voguedress-text h2 {
+      margin: 0;
     }
     .vogue-button {
       order: 4;
@@ -78,11 +97,19 @@ import "../styles/global.css";
     }
     .iran-img {
       order: 6;
+      padding-top: 20px;
     }
     .iran-text {
       order: 7;
+      width: 80%;
+    }
+    .iran-text h2 {
+      position: absolute;
+      top: 2151px;
+      width: 70%;
     }
     .iran-button {
+      padding-top: 35px;
       order: 8;
     }
   }
@@ -92,7 +119,7 @@ import "../styles/global.css";
     .shopcollection {
       display: flex;
       justify-content: center;
-      padding-top: 10px;
+      padding-top: 2px;
       padding-bottom: 15px;
     }
     .grid-container {
