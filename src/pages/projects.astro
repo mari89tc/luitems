@@ -30,7 +30,8 @@ import Linkbutton from "../components/Linkbutton.astro";
       <img src="/projects/iran.webp" alt="Voice of iran dress" />
     </div>
     <div class="irantext">
-      <h2><span style="color: #FCF6AC">VOICE OF IRAN</span> X LÜ ITEMS</h2>
+      <h2 class="dual-color">Voice of iran</h2>
+      <h2>X LÜ ITEMS</h2>
       <p>VOICE OF IRAN x LÜ ITEMS supports Iranian Women's struggle for freedom. Like a thread in a skein of yarn, we are bound together in a world that senses the pain carried by women who live without freedom!</p>
     </div>
     <div class="iranbutton">
@@ -93,6 +94,15 @@ import Linkbutton from "../components/Linkbutton.astro";
     .irantext {
       order: 6;
     }
+
+    .dual-color {
+      margin-bottom: 0;
+      padding-top: 25px;
+    }
+
+    .irantext h2 {
+      margin-top: 0;
+    }
     .iranbutton {
       order: 7;
     }
@@ -136,6 +146,15 @@ import Linkbutton from "../components/Linkbutton.astro";
       width: 90%;
       padding-top: 20%;
     }
+
+    .dual-color::first-line {
+      color: #fcf6ac;
+    }
+
+    .dual-color {
+      position: absolute;
+      bottom: 250px;
+    }
     .papayapicture {
       grid-area: 1 / 1 / 2 / 2;
     }
@@ -166,10 +185,8 @@ import Linkbutton from "../components/Linkbutton.astro";
       padding-inline-start: 25px;
     }
     .irantext h2 {
-      width: 100%;
       margin: 0;
       position: absolute;
-      bottom: 150px;
     }
     .iranbutton {
       grid-area: 4 / 2 / 4 / 3;
