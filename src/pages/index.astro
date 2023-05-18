@@ -42,7 +42,7 @@ import "../styles/global.css";
       <img src="/index/irandress.webp" alt="Voice of iran image" />
     </div>
     <div class="iran-text">
-      <h2><span style="color: #FCF6AC">VOICE OF IRAN</span> X LÜ ITEMS</h2>
+      <h2>VOICE OF IRAN X LÜ ITEMS</h2>
     </div>
     <div class="iran-button">
       <Linkbutton href="/projects" text="SEE OTHER PROJECTS" />
@@ -73,19 +73,23 @@ import "../styles/global.css";
     }
     .LU-text {
       order: 1;
-      display: flex;
+      margin: 0;
+      width: 100%;
+      display: grid;
+      grid-column: 1fr;
       justify-content: center;
+      align-self: center;
+    }
+    .LU-text h1 {
+      padding-top: 25px;
       margin: 0;
     }
     .LU-text h3 {
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      top: 410px;
+      margin: 0;
     }
     .LU-img {
       order: 2;
+      padding-top: 20px;
       padding-bottom: 70px;
     }
     .voguedress-text {
@@ -107,15 +111,14 @@ import "../styles/global.css";
     }
     .iran-text {
       order: 7;
-      width: 80%;
+      width: 90%;
     }
     .iran-text h2 {
-      position: absolute;
-      top: 1718px;
-      width: 100%;
+      padding-top: 20px;
+      margin: 0;
     }
+
     .iran-button {
-      padding-top: 35px;
       order: 8;
     }
   }
