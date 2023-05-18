@@ -4,49 +4,184 @@ import Main from "../layouts/Main.astro";
 import "../styles/global.css";
 ---
 
-<html lang="da">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/faviconlogo.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>LÜ ITEMS</title>
-  </head>
-  <body>
-    <Main>
-      <video width="100%" height="100%" autoplay muted loop src="/video1.webm"
-      ></video>
+<Main>
+  <video width="100%" height="100%" autoplay muted loop src="/forsidevideo1.mp4"
+  ></video>
 
-      <div class="grid-container">
-        <Linkbutton text="SHOP SUMMER COLLECTION HERE" />
+  <div class="shopcollection">
+    <Linkbutton text="SHOP SUMMER COLLECTION HERE" />
+  </div>
 
-        <!-- 1 IMG + DES -->
-        <h1>LÜ ITEMS</h1>
-        <h2>SLOWNESS AND SUSTAINABILITY</h2>
-        <img src="/forside1.webp" alt="img of dress" />
+  <div class="grid-container">
+    <!-- 1 IMG + DES -->
 
-        <h2>MERMAID DRESS IN VOGUE</h2>
+    <div class="LU-text">
+      <h1>LÜ ITEMS</h1>
+      <h3>SLOWNESS AND SUSTAINABILITY</h3>
+    </div>
+    <div class="LU-img">
+      <img src="/forside1.webp" alt="img of dress" />
+    </div>
+
+    <div class="voguedress-img">
+      <img src="/forside2.webp" alt="Dress from vogue" />
+    </div>
+    <div class="voguedress-text">
+      <h2>MERMAID DRESS IN VOGUE</h2>
+      <div class="vogue-button">
         <Linkbutton href="/products" text="SHOP THE DRESS" />
       </div>
-    </Main>
-  </body>
-</html>
+    </div>
+
+    <div class="iran-img">
+      <img src="/projects/iran.webp" alt="Voice of iran image" />
+    </div>
+    <div class="iran-text">
+      <h2><span style="color: #FCF6AC">VOICE OF IRAN</span> X LÜ ITEMS</h2>
+    </div>
+    <div class="iran-button">
+      <Linkbutton href="/projects" text="SEE OTHER PROJECTS" />
+    </div>
+  </div>
+</Main>
 
 <style>
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  /* MOBILE VERSION */
+  @media (max-width: 600px) {
+    .shopcollection {
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    h3,
+    h2,
+    h1,
+    .vogue-button,
+    .vougebutton,
+    .iran-button {
+      padding-inline-start: 8%;
+      max-width: 90%;
+    }
+    .LU-text {
+      order: 1;
+      display: flex;
+      justify-content: center;
+    }
+    .LU-text h3 {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      top: 450px;
+    }
+    .LU-img {
+      order: 2;
+      padding-bottom: 70px;
+    }
+    .voguedress-text {
+      order: 3;
+    }
+    .voguedress-text h2 {
+      margin: 0;
+    }
+    .vogue-button {
+      order: 4;
+    }
+    .voguedress-img {
+      order: 5;
+    }
+    .iran-img {
+      order: 6;
+      padding-top: 20px;
+    }
+    .iran-text {
+      order: 7;
+      width: 80%;
+    }
+    .iran-text h2 {
+      position: absolute;
+      top: 2151px;
+      width: 70%;
+    }
+    .iran-button {
+      padding-top: 35px;
+      order: 8;
+    }
   }
-  h1 {
-    grid-column: 1/3;
-  }
-  video {
-    width: 100%;
+
+  /* COMPUTER VERSION */
+  @media (min-width: 600px) {
+    .shopcollection {
+      display: flex;
+      justify-content: center;
+      padding-top: 2px;
+      padding-bottom: 15px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .LU-text {
+      grid-area: 1 / 1 / 2 / 2;
+      position: relative;
+      padding-inline-start: 25px;
+      width: 100%;
+    }
+    .LU-text h3 {
+      position: absolute;
+      width: 100%;
+      top: 210px;
+    }
+    .LU-img {
+      grid-area: 1 / 2 / 2 /2;
+    }
+    .voguedress-img {
+      grid-area: 2 / 1 / 2 / 2;
+    }
+    .voguedress-text {
+      position: relative;
+      grid-area: 2 / 2 / 2 / 2;
+    }
+    .voguedress-text h2 {
+      position: absolute;
+      width: 120%;
+      right: 1px;
+    }
+    .voguedress-text .vogue-button {
+      grid-area: 2 / 2 / 2 / 2;
+      justify-self: end;
+      margin-inline-end: 25px;
+    }
+    .vogue-button {
+      position: absolute;
+      top: 290px;
+      right: 540px;
+    }
+    .iran-img {
+      margin-top: 3%;
+      grid-area: 3 / 1 /3/3;
+    }
+    .iran-text {
+      position: relative;
+      grid-area: 4 / 2 / 4 / 2;
+      width: 100%;
+      padding-inline-end: 25px;
+    }
+    .iran-text h2 {
+      position: absolute;
+      top: -180px;
+    }
+    .iran-button {
+      padding-inline-start: 25px;
+      grid-area: 4 / 1 / 4 / 1;
+    }
+    video {
+      width: 100%;
+    }
   }
 </style>
