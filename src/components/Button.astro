@@ -15,10 +15,10 @@ const { text, href = "/" } = Astro.props;
     font-weight: 400;
     font-size: 20px;
     line-height: 32px;
-    width: fit-content;
+    width: 550px;
     border: solid 4px #fcf6ac;
     color: #000000;
-    padding: 20px;
+    text-decoration: none;
   }
   button:hover {
     background-color: #000000;
@@ -26,10 +26,10 @@ const { text, href = "/" } = Astro.props;
     font-weight: 400;
     font-size: 20px;
     line-height: 32px;
-    width: fit-content;
+    width: 550px;
     border: solid 4px #000000;
     color: #fcf6ac;
-    padding: 20px;
+    text-decoration: none;
   }
   @media (max-width: 700px) {
     button {
@@ -42,6 +42,7 @@ const { text, href = "/" } = Astro.props;
       border: solid 4px #fcf6ac;
       color: #000000;
       padding: 20px;
+      text-decoration: none;
     }
     button:hover {
       background-color: #000000;
@@ -53,6 +54,7 @@ const { text, href = "/" } = Astro.props;
       border: solid 4px #000000;
       color: #fcf6ac;
       padding: 20px;
+      text-decoration: none;
     }
   }
 </style>
