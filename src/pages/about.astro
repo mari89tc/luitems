@@ -5,8 +5,8 @@ import Main from "../layouts/Main.astro";
 
 <Main>
   <section class="grid_1-1">
-    <div class="grid_picture1">
-      <img src="/about/about1.webp" alt="linn luders" />
+    <div class="linn1">
+      <img src="/about/linn.webp" alt="linn luders" />
     </div>
     <div class="grid_text1">
       <h2 id="footerabout">ABOUT LÜ ITEMS</h2>
@@ -23,12 +23,12 @@ import Main from "../layouts/Main.astro";
         THE ESSENCE OF OUR BRAND. SLOWNESS AND SUSTAINABILITY.
       </p>
     </div>
-    <div class="grid_picture2">
-      <img src="/about/about2.webp" alt="green dress" />
+    <div class="meremaid2">
+      <img src="/about/meremaid.webp" alt="green dress" />
     </div>
 
-    <div class="grid_picture3">
-      <img src="/about/about3.webp" alt="coming out of the water" />
+    <div class="outfromwater3">
+      <img src="/about/outfromwater.webp" alt="coming out of the water" />
     </div>
 
     <div class="grid_text3">
@@ -38,8 +38,8 @@ import Main from "../layouts/Main.astro";
         <p>SHIPPING ONLY IN EUROPE. COSTUMER PAYS THE SHIPPING PRICE - WHICH IS AUTOMATICALLY REGULATED AFTER THE EUROPEAN STANDARD PRICE. IT IS NOT POSSIBLE TO RETURN YOUR ITEMS</p>
       </div>
 
-      <div class="grid_picture4">
-        <img src="/about/about4.webp" alt="back with top on" />
+      <div class="back4">
+        <img src="/about/back.webp" alt="back with top on" />
       </div>
       <div class="grid_text4">
         <h2>PRODUCT DESCRIPTION</h2>
@@ -49,47 +49,68 @@ import Main from "../layouts/Main.astro";
   </section>
 </Main>
 <style>
+
+@media (min-width: 600px) {
+  .linn1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 2px;
+    padding-bottom: 15px;
+  }
+  
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .grid_picture1 {
+  
+  .linn1 {
     grid-area: 1 / 1 / 2 / 2;
   }
+  
   .grid_text1 {
     grid-area: 1 / 2 / 2 / 2;
     padding-inline-start: 25px;
     width: 90%;
   }
+  
   .grid_text2 {
     grid-area: 2 / 1 / 2 / 2;
     padding-left: 15px;
+    position: relative;
   }
-  .grid_picture2 {
-    grid-area: 2 / 2 / 2 /2;
-    height: 300%;
-    width: 300%;
+  
+  .grid_text2 p {
+    width: 130%;
+  }
+  
+  .grid_text2 h2 {
+    position: absolute;
+    width: 120%;
+    left: 1px;
+  }
+  
+  .meremaid2 {
+    grid-area: 2 / 2 / 2 / 2;
+   
   }
 
- /*.grid_picture4 {
-  grid-area:  5/ 4/ 4/ 4;
- }
+  .outfromwater3 {
+    grid-area: 2 / 2 / 3 / 1;
+  }
 
-  /* .grid_1-1-1 {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-        }
-    
-        .grid_1-1-1-1 {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-        }
-        .grid_1-1-1-1-1 {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-        }
-        .grid_picture {
-            display:grid;
-            grid-template-columns: 1fr 1fr;
-        } */
-</style>
+  .grid_text3 {
+    grid-area: 2 / 1 / 3 / 2;
+   
+  }
+
+  .back4 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .grid_text4 {
+    grid-area: 2 / 1 / 3 / 3;
+   
+  }
+}
+  </style>
+
