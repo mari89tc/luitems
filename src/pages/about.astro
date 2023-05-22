@@ -100,59 +100,55 @@ import Main from "../layouts/Main.astro";
     }
   }
   @media (max-width: 600px) {
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 10px;
+      gap: 20px;
+    }
+
     .grid_text1 {
-    order: 1;
-    margin: 0;
-    width: 100%;
-    display: grid;
-    grid-column: 1fr;
-    justify-content: center;
-    align-self: center;
-  }
+      order: 1;
+    }
+
+    .footerabout h2 {
+      width: 50%;
+    }
+    .linn1 {
+      order: 2;
+      padding-top: 20px;
+    }
+    .mermaid2 {
+      order: 2;
+      padding-top: 20px;
+    }
+    .grid_text2 {
+      order: 4;
+    }
+
+    .outfromwater3 {
+      order: 5;
+      padding-top: 20px;
+    }
+
+    .grid_text3 {
+      order: 6;
+    }
+
+    .back4 {
+      order: 7;
+      padding-top: 20px;
+    }
+
+    .grid_text4 {
+      order: 8;
+    }
   
-  .footerabout{
-    padding-top: 25px;
-    margin: 0;
-  }
-  .Linn1 {
-    order: 2;
-    padding-top: 20px;
-    padding-bottom: 70px;
-  }
-
-  .grid_text2 {
-    order: 3;
-    width: 100%;
-  }
-  .slowmade_text h2 {
-    margin: 0;
-  }
- 
-  .meremaid2 {
-    order: 5;
-  }
-  .outfromwater3 {
-    order: 6;
-    padding-top: 20px;
-  }
-  .grid_text3 {
-    order: 7;
-    width: 90%;
-  }
-  .footershipping h2 {
-    padding-top: 20px;
-    margin: 0;
-  }
-  .grid_text4 {
-    order: 7;
-    width: 80%;
-
-  }
-  .back4 {
-    order: 7;
-    padding-top: 20px;
-  }
-}
 
 
-</style>
+    }
+  
+   
+   
+   
+    </style>
