@@ -15,83 +15,77 @@ import Main from "../layouts/Main.astro";
         HER PARTICULARLY AWARE OF THE IMPORTANCE OF SLOWNESS AND SUSTAINABILLTY IN ALL ASPECT OF OUR LIVES. LETS TAKE CARE OF OURSELVES, EACH OTHER AND THE PLANET.
       </p>
     </div>
-
     <div class="grid_text2">
-      <h2>SLOWMADE AND SUSTAINABILITY</h2>
-      <p>
+      <h2 class="slowmade_text">SLOWMADE AND SUSTAINABILITY</h2>
+      <p class="slowmade_p">
         LÜ ITEMS IS A SLOW FASHION BRAND USING SUSTAINABLE MATERIALS. EVERY ITEMS IS UNIQUE AND MADE BY HAND. WE ARE PLACED IN THE HEART OF COPENHAGEN. THE PLANET CALLS FOR A NEW CONSIOUNESS AROUND MATERIALS - MENDING AND LONG LIFE DESIGNS. THAT'S
         THE ESSENCE OF OUR BRAND. SLOWNESS AND SUSTAINABILITY.
       </p>
     </div>
-    <div class="meremaid2">
+    <div class="mermaid2">
       <img src="/about/meremaid.webp" alt="green dress" />
     </div>
-
     <div class="outfromwater3">
       <img src="/about/outfromwater.webp" alt="coming out of the water" />
     </div>
-
     <div class="grid_text3">
-      <div>
-        <h2 id="footershipping">SHIPPING AND RETURN</h2>
-
-        <p>SHIPPING ONLY IN EUROPE. COSTUMER PAYS THE SHIPPING PRICE - WHICH IS AUTOMATICALLY REGULATED AFTER THE EUROPEAN STANDARD PRICE. IT IS NOT POSSIBLE TO RETURN YOUR ITEMS</p>
-      </div>
-
-      <div class="back4">
-        <img src="/about/back.webp" alt="back with top on" />
-      </div>
-      <div class="grid_text4">
-        <h2>PRODUCT DESCRIPTION</h2>
-        <p>All of our products are made from recycled yarn. the products are designed to be durable and long-lasting, but it's important to wash them with care to extend their lifespan. The one size products fit sizes from XS to L.</p>
-      </div>
+      <h2 id="footershipping">SHIPPING AND RETURN</h2>
+      <p>SHIPPING ONLY IN EUROPE. COSTUMER PAYS THE SHIPPING PRICE - WHICH IS AUTOMATICALLY REGULATED AFTER THE EUROPEAN STANDARD PRICE.</p>
+      <p>IT IS NOT POSSIBLE TO RETURN YOUR ITEMS</p>
+    </div>
+    <div class="grid_text4">
+      <h2>PRODUCT DESCRIPTION</h2>
+      <p>All of our products are made from recycled yarn. the products are designed to be durable and long-lasting, but it's important to wash them with care to extend their lifespan. The one size products fit sizes from XS to L.</p>
+    </div>
+    <div class="back4">
+      <img src="/about/back.webp" alt="back with top on" />
     </div>
   </section>
 </Main>
 <style>
+  @media (min-width: 600px) {
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .linn1 {
+      display: flex;
+      justify-content: center;
+      padding-top: 2px;
+      padding-bottom: 15px;
+    }
+    .linn1 {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .grid_text2 {
+      padding-inline-start: 25px;
+    }
+    .slowmade_text {
+      position: absolute;
+      width: 95%;
+    }
+    .slowmade_p {
+      padding-top: 40%;
+      width: 650px;
+    }
+    .grid_text1 {
+      grid-area: 1 / 2 / 2 / 2;
+      padding-inline-start: 25px;
+      width: 90%;
+    }
 
-@media (min-width: 600px) {
-  .linn1 {
-    display: flex;
-    justify-content: center;
-    padding-top: 2px;
-    padding-bottom: 15px;
+    .mermaid2 {
+      grid-area: 2 / 2 / 2 / 2;
+    }
+    .grid_text3 {
+      width: 650px;
+      padding-inline-start: 25px;
+    }
+    .grid_text4 {
+      width: 650px;
+      padding-inline-start: 25px;
+    }
   }
-  
-  .grid_1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  @media (max-width: 600px) {
   }
-  
-  .linn1 {
-    grid-area: 1 / 1 / 2 / 2;
-  }
-  
-  .grid_text1 {
-    grid-area: 1 / 2 / 2 / 2;
-    padding-inline-start: 25px;
-    width: 90%;
-  }
-  
-  .meremaid2 {
-    grid-area: 2 / 2 / 2 / 2;
-   
-  }
-/*
- .grid_text2 {
-    grid-area: 2 / 1 / 2 / 2;
-    padding-left: 15px;
-    position: relative;
-  }
-  
-  
-  .grid_text2 h2 {
-    position: absolute;
-    width: 120%;
-    left: 1px;
-  }
-*/
-  
-}
-  </style>
-
+</style>
