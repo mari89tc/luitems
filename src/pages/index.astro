@@ -5,13 +5,7 @@ import "../styles/global.css";
 ---
 
 <Main>
-  <video
-    width="100%"
-    height="100%"
-    autoplay
-    muted
-    loop
-    src="/index/forsidevideo1.webm"></video>
+  <video width="100%" height="100%" autoplay muted loop src="/index/forsidevideo1.webm"></video>
 
   <div class="shopcollection">
     <Linkbutton text="SHOP SUMMER COLLECTION HERE" />
@@ -42,7 +36,8 @@ import "../styles/global.css";
       <img src="/index/irandress.webp" alt="Voice of iran image" />
     </div>
     <div class="iran-text">
-      <h2>VOICE OF IRAN X LÜ ITEMS</h2>
+      <h2 class="dual_color">VOICE OF IRAN</h2>
+      <h2>X LÜ ITEMS</h2>
     </div>
     <div class="iran-button">
       <Linkbutton href="/projects" text="SEE OTHER PROJECTS" />
@@ -174,16 +169,23 @@ import "../styles/global.css";
     .iran-img {
       margin-top: 3%;
       grid-area: 3 / 1 /3/3;
+      position: relative;
     }
     .iran-text {
-      position: relative;
+      position: absolute;
       grid-area: 4 / 2 / 4 / 2;
       width: 100%;
       padding-inline-end: 25px;
+      top: 3170px;
+      left: 740px;
     }
-    .iran-text h2 {
+
+    .dual_color::first-line {
+      color: #fcf6ac;
+    }
+    .dual_color {
       position: absolute;
-      top: -180px;
+      bottom: 100px;
     }
     .iran-button {
       padding-inline-start: 25px;
