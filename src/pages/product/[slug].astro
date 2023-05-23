@@ -39,7 +39,7 @@ import Form from "../../components/Form.astro";
     </div>
     <div class="grid_2">
       <h3>{singleProduct.name}</h3>
-      <h3>{singleProduct.price}</h3>
+      <h3>{singleProduct.price} DKK</h3>
       <p>{singleProduct.description}</p>
       <p class="colour">COLOUR: {singleProduct.colour}</p>
       <div class="but">
@@ -64,12 +64,14 @@ import Form from "../../components/Form.astro";
   };
 
   // Convert the object to a JSON string
-  const productDataString = JSON.stringify(productData);
+  // const productDataString = JSON.stringify(productData);
 
   // Store the data in local storage
   function addToLocalStorage() {
     console.log("addToLocalStorage");
-    localStorage.setItem("product", productDataString);
+    const currentProducts = JSON.parse(localStorage.getItem("product")) || [];
+    currentProducts.push(productData);
+    localStorage.setItem("product", JSON.stringify(currentProducts));
   }
 
   document.querySelector(".but").addEventListener("click", addToLocalStorage);
