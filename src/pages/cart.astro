@@ -3,54 +3,111 @@ import Main from "../layouts/Main.astro";
 import Linkbutton from "../components/Linkbutton.astro";
 import "../styles/global.css";
 import Button from "../components/Button.astro";
-export async function getStaticPaths() {
-  const url = "https://bhbgbtxgwftidykearaz.supabase.co/rest/v1/products?soldout=eq.false";
-  const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoYmdidHhnd2Z0aWR5a2VhcmF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODMwMTM2NjcsImV4cCI6MTk5ODU4OTY2N30.KjyWOsFYOHmmoEoBuf75grof4iS8KONyCwqlmIDcaNE";
-  const options = {
-    method: "GET",
-    headers: {
-      apikey: api,
-    },
-  };
-  const data = await fetch(url, options).then((res) => res.json());
-  console.log(data);
-  return data.map((cartProduct) => {
-    console.log(cartProduct.slug);
-    return {
-      params: { slug: cartProduct.slug },
-      props: { cartProduct },
-    };
-  });
-}
-const { cartProduct } = Astro.props;
 ---
 
-<Main>
+<Main title="Cart">
   <section>
     <Linkbutton href="/products" text="BACK TO PRODUCTS" />
     <h2>CART</h2>
-    <div>
-      <img class="cartImg" src={"/productlist/" + cartProduct.img + "-front.webp"} alt={cartProduct.name} />
-      <h4>{cartProduct.name}</h4>
-      <p>{cartProduct.price}</p>
-    </div>
+    <div class="basketProduct"></div>
+    <template>
+      <div class="grid_1">
+        <img class="cartImg" />
+        <div>
+          <h4 class="name"></h4>
+          <p class="price"></p>
+        </div>
+      </div>
+    </template>
+    <img class="removeBasket" src="/remove_basket.svg" alt="remove from basket" />
+
     <div class="grid">
-      <h3>SUBTOTAL {}</h3>
+      <div class="flex_sub">
+        <h3>SUBTOTAL</h3>
+        <h3 class="sub"></h3>
+      </div>
       <p>TAX INCLUDED</p>
       <Button text="CHECKOUT" />
     </div>
   </section>
 </Main>
+<script>
+  // Retrieve the stored data from local storage
+  const storedProductDataString = localStorage.getItem("product");
 
+  // Convert the JSON string back to an object
+  const storedProductData = JSON.parse(storedProductDataString);
+  let total = 0;
+  for (const product of storedProductData) {
+    showProduct(product);
+  }
+  // storedProductData.forEach(showProduct);
+  document.querySelector("h3.sub").textContent = total + "DKK";
+  function showProduct(product) {
+    //console.log(product);
+    // fang template
+    const template = document.querySelector("template").content;
+    //Lav en kopi
+    const copy = template.cloneNode(true);
+    // Access the individual properties
+    const storedImageUrl = product.imageUrl;
+    const storedName = product.name;
+    const storedPrice = parseFloat(product.price);
+    total += storedPrice;
+    copy.querySelector("img.cartImg").src = storedImageUrl;
+    copy.querySelector("img.cartImg").alt = storedName;
+    copy.querySelector("h4.name").textContent = storedName;
+    copy.querySelector("p.price").textContent = storedPrice + "DKK";
+
+    // //appende til DOM
+    document.querySelector(".basketProduct").appendChild(copy);
+    // localstorage.removeItem(product);
+  }
+</script>
 <style>
   section {
     margin: 20px;
     display: grid;
+  }
+  section h2 {
+    justify-self: center;
+    align-self: center;
+  }
+  .grid_1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .grid_1 img {
+    width: 250px;
+    padding: 20px;
+    justify-self: end;
   }
 
   .grid {
     display: grid;
     border-top: 2px solid #000000;
     justify-content: flex-end;
+    margin-top: 140px;
+    padding-right: 70px;
+  }
+  .flex_sub {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -40px;
+  }
+  @media (max-width: 600px) {
+    .grid_1 img {
+      width: 450px;
+      padding: 20px;
+      justify-self: end;
+    }
+    .flex_sub {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: -20px;
+    }
+    .grid {
+      padding-right: 0;
+    }
   }
 </style>
