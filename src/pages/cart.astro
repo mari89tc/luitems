@@ -19,6 +19,7 @@ import Button from "../components/Button.astro";
         </div>
       </div>
     </template>
+    <img class="removeBasket" src="/remove_basket.svg" alt="remove from basket" />
 
     <div class="grid">
       <div class="flex_sub">
@@ -60,6 +61,7 @@ import Button from "../components/Button.astro";
 
     // //appende til DOM
     document.querySelector(".basketProduct").appendChild(copy);
+    // localstorage.removeItem(product);
   }
 </script>
 <style>
