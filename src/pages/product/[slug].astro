@@ -33,9 +33,9 @@ import Form from "../../components/Form.astro";
   </div>
   <section id={singleProduct.slug} data-imgurl={"/productlist/" + singleProduct.img + "-front.webp"} data-name={singleProduct.name} data-price={singleProduct.price}>
     <div class="grid_1">
-      <img class="img_front" src={"/productlist/" + singleProduct.img + "-front.webp"} alt={singleProduct.name} />
-      <img class="img_back" src={"/productlist/" + singleProduct.img + "-back.webp"} alt={singleProduct.name} />
-      <img class="img_side" src={"/productlist/" + singleProduct.img + "-side.webp"} alt={singleProduct.name} />
+      <img class="img_front" src={"/productlist/" + singleProduct.img + "-front.webp"} alt={singleProduct.name} width="100%" height="100%" />
+      <img class="img_back" src={"/productlist/" + singleProduct.img + "-back.webp"} alt={singleProduct.name} width="100%" height="100%" />
+      <img class="img_side" src={"/productlist/" + singleProduct.img + "-side.webp"} alt={singleProduct.name} width="100%" height="100%" />
     </div>
     <div class="grid_2">
       <h3>{singleProduct.name}</h3>
