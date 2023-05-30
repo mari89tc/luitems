@@ -10,6 +10,27 @@ html {
 img {
   max-width: 100%;
 }
+
+@media (min-width: 600px) {
+  #hero_desk {
+    display: block;
+  }
+
+  #hero_mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  #hero_desk {
+    display: none;
+  }
+
+  #hero_mobile {
+    display: block;
+  }
+}
+
 /* Fonte til desktop */
 h1 {
   font-family: "Roboto", sans-serif;
