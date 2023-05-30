@@ -12,14 +12,16 @@ import Button from "../components/Button.astro";
     <div class="basketProduct"></div>
     <template>
       <div class="grid_1">
-        <img class="cartImg" />
+        <img class="cartImg" width="100%" height="100%" />
         <div>
           <h4 class="name"></h4>
           <p class="price"></p>
         </div>
       </div>
     </template>
-
+    <div class="removeBut">
+      <Button id="removeButton" href="" text="Remove all" />
+    </div>
     <div class="grid">
       <div class="flex_sub">
         <h3>SUBTOTAL</h3>
@@ -37,8 +39,10 @@ import Button from "../components/Button.astro";
   // Convert the JSON string back to an object
   const storedProductData = JSON.parse(storedProductDataString);
   let total = 0;
-  for (const product of storedProductData) {
-    showProduct(product);
+  if (storedProductData) {
+    for (const product of storedProductData) {
+      showProduct(product);
+    }
   }
   // storedProductData.forEach(showProduct);
   document.querySelector("h3.sub").textContent = total + "DKK";
@@ -61,6 +65,10 @@ import Button from "../components/Button.astro";
     // //appende til DOM
     document.querySelector(".basketProduct").appendChild(copy);
   }
+  document.querySelector("#removeButton").addEventListener("click", () => {
+    console.log("click");
+    localStorage.removeItem("product");
+  });
 </script>
 <style>
   section {
@@ -80,7 +88,11 @@ import Button from "../components/Button.astro";
     padding: 20px;
     justify-self: end;
   }
-
+  .removeBut {
+    padding-top: 70px;
+    justify-self: center;
+    align-self: center;
+  }
   .grid {
     display: grid;
     border-top: 2px solid #000000;
@@ -93,6 +105,7 @@ import Button from "../components/Button.astro";
     justify-content: space-between;
     margin-bottom: -40px;
   }
+
   @media (max-width: 600px) {
     .grid_1 img {
       width: 450px;

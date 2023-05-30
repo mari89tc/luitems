@@ -8,7 +8,7 @@ import "../styles/global.css";
   <video width="100%" height="100%" autoplay muted loop src="/index/forsidevideo1-1.webm"></video>
 
   <div class="shopcollection">
-    <Linkbutton text="SHOP SUMMER COLLECTION HERE" />
+    <Linkbutton href="/products" text="SHOP SUMMER COLLECTION HERE" />
   </div>
 
   <div class="grid-container">
@@ -16,14 +16,14 @@ import "../styles/global.css";
 
     <div class="LU-text">
       <h1>LÜ ITEMS</h1>
-      <h3>SLOWNESS AND SUSTAINABILITY</h3>
+      <h3>Slowmade crocheted clothes made with sustainable yarn</h3>
     </div>
     <div class="LU-img">
-      <img src="/index/closeupdress.webp" alt="img of dress" />
+      <img src="/index/closeupdress.webp" alt="img of dress" width="100%" height="100%" />
     </div>
 
     <div class="voguedress-img">
-      <img src="/index/voguedress.webp" alt="Dress from vogue" />
+      <img src="/index/voguedress.webp" alt="Dress from vogue" width="100%" height="100%" />
     </div>
     <div class="voguedress-text">
       <h2>MERMAID DRESS IN VOGUE</h2>
@@ -33,7 +33,7 @@ import "../styles/global.css";
     </div>
 
     <div class="iran-img">
-      <img src="/index/irandress.webp" alt="Voice of iran image" />
+      <img src="/index/irandress.webp" alt="Voice of iran image" width="100%" height="100%" />
     </div>
     <div class="iran-text">
       <h2 class="dual_color">VOICE OF IRAN</h2>
@@ -59,7 +59,9 @@ import "../styles/global.css";
       grid-template-columns: 1fr;
     }
 
+    h1,
     h2,
+    h3,
     .vogue-button,
     .vougebutton,
     .iran-button {
@@ -157,8 +159,8 @@ import "../styles/global.css";
     }
     .voguedress-text h2 {
       position: absolute;
-      width: 120%;
-      right: 1px;
+      width: 100%;
+      right: 100px;
     }
     .voguedress-text .vogue-button {
       grid-area: 2 / 2 / 2 / 2;
@@ -180,7 +182,7 @@ import "../styles/global.css";
       grid-area: 4 / 2 / 4 / 2;
       width: 100%;
       padding-inline-end: 25px;
-      top: 3170px;
+      top: 3140px;
       left: 740px;
     }
 
