@@ -53,20 +53,17 @@ import Form from "../../components/Form.astro";
 </Main>
 
 <script>
-  console.log("halooooooooo");
+  console.log("produkt");
   const produkt = document.querySelector("section");
 
-  // Create an object to hold the data
+  // Lav et objekt der indeholder dataen
   const productData = {
     imageUrl: produkt.dataset.imgurl,
     name: produkt.dataset.name,
     price: produkt.dataset.price,
   };
 
-  // Convert the object to a JSON string
-  // const productDataString = JSON.stringify(productData);
-
-  // Store the data in local storage
+  // Gem data i local storage
   function addToLocalStorage() {
     console.log("addToLocalStorage");
     const currentProducts = JSON.parse(localStorage.getItem("product")) || [];

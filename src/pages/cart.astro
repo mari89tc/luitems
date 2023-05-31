@@ -33,10 +33,10 @@ import Button from "../components/Button.astro";
   </section>
 </Main>
 <script>
-  // Retrieve the stored data from local storage
+  // Hent de gemte data fra local storage
   const storedProductDataString = localStorage.getItem("product");
 
-  // Convert the JSON string back to an object
+  // Konverter JSON string tilbage til et objekt.
   const storedProductData = JSON.parse(storedProductDataString);
   let total = 0;
   if (storedProductData) {
@@ -44,15 +44,13 @@ import Button from "../components/Button.astro";
       showProduct(product);
     }
   }
-  // storedProductData.forEach(showProduct);
   document.querySelector("h3.sub").textContent = total + "DKK";
   function showProduct(product) {
-    //console.log(product);
     // fang template
     const template = document.querySelector("template").content;
     //Lav en kopi
     const copy = template.cloneNode(true);
-    // Access the individual properties
+    // fang de individuelle data
     const storedImageUrl = product.imageUrl;
     const storedName = product.name;
     const storedPrice = parseFloat(product.price);
@@ -65,6 +63,7 @@ import Button from "../components/Button.astro";
     // //appende til DOM
     document.querySelector(".basketProduct").appendChild(copy);
   }
+  //click for at fjerne alle produkter
   document.querySelector("#removeButton").addEventListener("click", () => {
     console.log("click");
     localStorage.removeItem("product");
