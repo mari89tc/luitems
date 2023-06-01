@@ -20,9 +20,19 @@ import "../styles/global.css";
     <meta name="robots" content="noindex" />
   </head>
   <body class={title} class={type}>
-    <Header />
-    <slot />
-    <Footer />
-    <script src="../scripts/login.js"></script>
+    <div class="wrapper">
+      <Header />
+      <slot />
+      <Footer />
+      <script src="../scripts/login.js"></script>
+    </div>
   </body>
 </html>
+
+<style>
+  .wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+  }
+</style>
